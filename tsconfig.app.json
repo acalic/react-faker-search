@@ -7,8 +7,8 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "typeRoots": ["./node_modules/@types"],
-    "esModuleInterop": true, // Add this line
-    "jsx": "react-jsx", // Add this line
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
 
     /* Bundler mode */
     "moduleResolution": "bundler",

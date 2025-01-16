@@ -6,7 +6,7 @@ import Close from '../../assets/icons/close.svg';
 import './SearchInput.scss';
 import { useNavigate } from 'react-router-dom';
 
-interface SearchInputProps {
+export interface SearchInputProps {
   searchQuery: string;
   isSearchHeader?: boolean;
   onChange: (query: string) => void;

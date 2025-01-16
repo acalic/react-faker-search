@@ -7,7 +7,19 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 export default defineConfig({
   plugins: [
     react(), 
-    VitePWA(),
+    VitePWA({
+      manifest: {
+        name: 'React Faker Search',
+        short_name: 'ReactFakerSearch',
+        description: 'A simple React app to do a search using "faker"',
+        start_url: '/',
+        scope: '/',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#d3d3d3',
+        orientation: 'portrait'
+      }
+    }),
     createHtmlPlugin({
       minify: true,
       inject: {

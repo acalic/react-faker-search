@@ -1,11 +1,12 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import Homepage from './Homepage';
 import { MemoryRouter } from 'react-router-dom';
+import { SearchInputProps } from '../../components/SearchInput/SearchInput';
 
 // Mock the SearchInput component
 jest.mock('../../components/SearchInput/SearchInput', () => ({
   __esModule: true,
-  default: ({ searchQuery, onChange, onSearch }: any) => (
+  default: ({ searchQuery, onChange, onSearch }: SearchInputProps) => (
     <div data-testid="search-input">
       <input
         data-testid="search-input-field"

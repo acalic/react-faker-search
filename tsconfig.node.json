@@ -5,8 +5,6 @@
     "lib": ["ES2023"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "esModuleInterop": true, // Add this line
-    "jsx": "react", // Add this line
 
     /* Bundler mode */
     "moduleResolution": "bundler",
