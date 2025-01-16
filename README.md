@@ -2,6 +2,12 @@
 
 A responsive and dynamic web application built with React, TypeScript, and Vite, designed to provide fast and efficient search functionality.
 
+![App Screenshot](public/screenshot.png)
+
+### Demo
+
+You can view the deployed app here: [React Faker Search](https://react-faker-search.vercel.app/)
+
 ### Features
 
 - **Search Input**: Dynamic search bar with query and clearing functionality.
@@ -19,6 +25,7 @@ A responsive and dynamic web application built with React, TypeScript, and Vite,
 - **React Router**: For dynamic routing.
 - **Jest & React Testing Library**: For unit and integration testing.
 - **faker.js**: To generate mock data for search results.
+- **Vercel**: For seamless deployment and hosting.
 
 ### Installation
 
