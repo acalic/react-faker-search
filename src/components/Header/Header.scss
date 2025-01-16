@@ -1,0 +1,46 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.header {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid $border-color;
+    background-color: $white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    .header-icons,
+    .logo {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .logo-brand {
+        font-weight: 700;
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+    }
+
+    .icon-menu {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 520px) {
+    .header.has-search {
+        .header-icons {
+            display: none;
+        }
+    }
+}

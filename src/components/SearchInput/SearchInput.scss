@@ -1,0 +1,123 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.search-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-width: 300px;
+    max-width: 90%;
+    width: 100%;
+
+    &.search-header {
+        flex-direction: row;
+        margin-right: 1.5rem;
+
+        .search-logo {
+            max-width: 90px;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            input {
+                height: 32px;
+            }
+        }
+
+        .search-button {
+            display: none;
+        }
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: $white;
+        border: 2px solid $light-grey;
+        border-radius: 24px;
+        padding: 0 16px;
+        @include transition(all);
+
+        &:focus-within {
+            box-shadow: 0px 2px 8px rgba(60, 64, 67, 0.25);
+        }
+
+        .magnifier-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+        }
+
+        input {
+            flex: 1;
+            height: 44px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 0 8px;
+            background: transparent;
+        }
+
+        .close-icon {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            margin-left: 8px;
+            @include transition(opacity);
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .search-button {
+        min-height: 42px;
+        min-width: 92px;
+        padding: 0 16px;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: $light-background;
+        color: $dark-grey;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        @include transition(all);
+
+        &:hover {
+            background-color: #d7d7d7;
+        }
+
+        &:active {
+            background-color: #e8eaed;
+        }
+
+        &:disabled {
+            background-color: #f8f9fa;
+            color: #dadce0;
+            cursor: not-allowed;
+        }
+    }
+
+    .visually-hidden {
+        @include visually-hidden;
+    }
+}
+
+@media (min-width: 768px) {
+    .search-input {
+        max-width: 584px;
+    }
+}
+
+@media (max-width: 520px) {
+    .search-input.search-header {
+        display: block;
+
+        .search-logo {
+            margin-bottom: 0.25rem;
+        }
+    }
+}

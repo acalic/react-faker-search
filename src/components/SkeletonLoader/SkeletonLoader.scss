@@ -1,0 +1,51 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.skeleton-loader {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skeleton-result {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-line {
+  background-color: $light-background;
+  height: 12px;
+  animation: skeleton-loading 1.5s infinite ease-in-out;
+
+  &:nth-child(2) {
+    height: 16px;
+    margin: 0.5rem 0;
+  }
+
+  &.width-sm {
+    width: 50%;
+  }
+
+  &.width-md {
+    width: 70%;
+  }
+
+  &.width-lg {
+    width: 90%;
+  }
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: $light-background;
+  }
+
+  50% {
+    background-color: #ececec;
+  }
+
+  100% {
+    background-color: $light-background;
+  }
+}

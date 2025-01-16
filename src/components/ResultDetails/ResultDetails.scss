@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.result-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  background-color: $white;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  a {
+    color: $dark-grey;
+    text-decoration: none;
+    word-break: break-word;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+    color: $dark-grey;
+  }
+
+  p {
+    font-size: 1rem;
+    color: $medium-grey;
+    margin: 0;
+  }
+}
